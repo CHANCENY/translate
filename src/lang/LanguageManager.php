@@ -99,4 +99,17 @@ class LanguageManager
         return (bool)$this->getByCode($code);
     }
     
+    public function getLanguages(): array {
+        $all = [];
+        foreach ($this->languages as $language) {
+            forEach($language as $key=>$value) {
+                if (is_array($value)) {
+                    $all[$value['code']] = $value['language'];
+                }
+            }
+
+        }
+        return $all;
+    }
+    
 }
