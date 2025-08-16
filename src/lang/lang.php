@@ -1,6 +1,6 @@
 <?php
 
-$languages = "https://raw.githubusercontent.com/itsecurityco/to-google-translate/refs/heads/master/supported_languages.json";
+$languages = __DIR__. "/supported_languages.json";
 $curl = curl_init($languages);
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 $response = curl_exec($curl);
